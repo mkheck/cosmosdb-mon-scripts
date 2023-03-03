@@ -17,7 +17,7 @@ az cosmosdb create -n $COSMOSDB_MON_ACCOUNT -g $AZ_RESOURCE_GROUP --kind MongoDB
 echo '>> az cosmosdb mongodb database create -a $COSMOSDB_MON_ACCOUNT -n mkheck-my-test-db -g $AZ_RESOURCE_GROUP --verbose'
 az cosmosdb mongodb database create -a $COSMOSDB_MON_ACCOUNT -n $COSMOSDB_MON_NAME -g $AZ_RESOURCE_GROUP --verbose
 
-# For MongoDB API, a single URL connection string (URL+key)
+# For Azure Cosmos DB for MongoDB, a single URL connection string (URL+key)
 # export COSMOSDB_MON_URL=$(az cosmosdb show -n $COSMOSDB_MON_ACCOUNT -g $AZ_RESOURCE_GROUP --query documentEndpoint --output tsv)
 export COSMOSDB_MON_URL=$(az cosmosdb keys list --type connection-strings -n $COSMOSDB_MON_ACCOUNT -g $AZ_RESOURCE_GROUP --query "connectionStrings[0].connectionString" --output tsv)
 

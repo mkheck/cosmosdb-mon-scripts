@@ -22,5 +22,5 @@ export AZ_LOCATION='eastus'
 export COSMOSDB_MON_ACCOUNT=$AZUREID'-'$RANDOMIZER'-mongoacct'
 export COSMOSDB_MON_NAME=$AZUREID'-'$RANDOMIZER'-mongodb'
 
-# For MongoDB API, a single URL connection string (URL+key)
+# For Azure Cosmos DB for MongoDB, a single URL connection string (URL+key)
 # export COSMOSDB_MON_URL=$(az cosmosdb keys list --type connection-strings -n $COSMOSDB_MON_ACCOUNT -g $AZ_RESOURCE_GROUP --query "connectionStrings[0].connectionString" --output tsv)
